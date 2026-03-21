@@ -31,7 +31,7 @@ const AboutSection = () => (
               I've completed 8–9 months of intensive training in Hardware and Networking Technician Level-2 under CTEVT, gaining practical skills in computer hardware, network configuration, and troubleshooting.
             </p>
             <Button variant="outline" className="rounded-full" asChild>
-              <a href="#contact">
+              <a href="/cv-sandesh.pdf" download="cv-sandesh.pdf" rel="noopener noreferrer">
                 <Download className="mr-2 h-4 w-4" />
                 Download CV
               </a>
