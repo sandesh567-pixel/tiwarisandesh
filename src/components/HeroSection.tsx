@@ -61,7 +61,7 @@ const HeroSection = () => (
             transition={{ duration: 0.5, delay: 0.2 }}
             className="flex flex-wrap items-center gap-3 text-sm md:text-base mb-6"
           >
-            {["IT Student", "BIT Student", "IT Support", "Networking & System Administration"].map((role, i) => (
+            {[ "BIT Student", "IT Support", "Networking & System Administration"].map((role, i) => (
               <span key={role} className="flex items-center gap-3">
                 {i > 0 && <span className="w-1 h-6 rounded-full bg-primary/30" />}
                 <span className="text-muted-foreground">{role}</span>
