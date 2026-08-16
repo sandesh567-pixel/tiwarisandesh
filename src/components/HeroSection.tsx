@@ -12,7 +12,7 @@ const stats = [
 
 const socials = [
   { icon: Github, href: "https://github.com/sandesh567-pixel", label: "GitHub" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/sandesh-tiwari-b16a5a337/", label: "LinkedIn" },
   { icon: Mail, href: "#contact", label: "Email" },
 ];
 
