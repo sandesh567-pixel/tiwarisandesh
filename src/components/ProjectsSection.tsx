@@ -5,27 +5,31 @@ import { Button } from "@/components/ui/button";
 
 const projects = [
   {
+    title: "Network Design — Cisco Packet Tracer",
+    desc: "Created multiple network topologies including routers, switches, and subnetting.",
+    tech: ["Cisco", "Networking", "Subnetting"],
+    github: "https://github.com/sandesh567-pixel/cisco-networking-labs",
+    color: "from-primary/20 to-primary/5",
+  },
+  {
     title: "RC Plane Engineering Project",
     desc: "Designed and built a thermocol-based RC plane with motor and control system.",
     tech: ["Engineering", "Electronics"],
-    color: "from-primary/20 to-primary/5",
+    github: "https://github.com/sandesh567-pixel/rc-plane-engineering-project",
+    color: "from-accent to-accent/50",
   },
   {
     title: "Banking System (C++)",
     desc: "Developed a basic banking management system using C++ concepts.",
     tech: ["C++", "OOP"],
-    color: "from-accent to-accent/50",
-  },
-  {
-    title: "Network Design — Cisco Packet Tracer",
-    desc: "Created multiple network topologies including routers, switches, and subnetting.",
-    tech: ["Cisco", "Networking", "Subnetting"],
+    github: "https://github.com/sandesh567-pixel/banking-system-cpp",
     color: "from-primary/20 to-primary/5",
   },
   {
     title: "Personal Portfolio Website",
     desc: "Designed a responsive personal portfolio website showcasing projects and skills.",
     tech: ["HTML", "CSS", "JavaScript"],
+    github: "https://github.com/sandesh567-pixel/tiwarisandesh",
     color: "from-accent to-accent/50",
   },
 ];
@@ -50,7 +54,7 @@ const ProjectsSection = () => (
               <div className="flex items-start justify-between mb-3">
                 <h3 className="font-display font-semibold text-foreground text-lg">{p.title}</h3>
                 <a
-                  href="https://github.com/sandeshtiwari"
+                 href={p.github}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-8 h-8 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors flex-shrink-0"
