@@ -3,18 +3,27 @@ import SectionHeading from "./SectionHeading";
 import { MessageSquare, Lightbulb, Users, Handshake } from "lucide-react";
 
 const technical = [
-  { name: "HTML", pct: 85 },
-  { name: "CSS", pct: 80 },
-  { name: "JavaScript (Basic)", pct: 55 },
-  { name: "C Programming", pct: 65 },
-  { name: "Hardware Maintenance", pct: 80 },
-  { name: "Network Configuration", pct: 75 },
-  { name: "Cisco Packet Tracer", pct: 70 },
-  { name: "Subnetting", pct: 70 },
-  { name: "Router Configuration", pct: 65 },
-  { name: "Troubleshooting", pct: 80 },
+  { name: "Computer Hardware Troubleshooting" },
+  { name: "Windows Installation & Configuration" },
+  { name: "LAN & IP Configuration" },
+  { name: "Network Troubleshooting" },
+  { name: "Cisco Packet Tracer" },
+  { name: "Subnetting" },
+  { name: "Router & Switch Configuration Basics" },
+  { name: "Windows Server Configuration" },
+  { name: "Domain & Client Configuration" },
+  { name: "User, Group & Group Policy Management" },
+  { name: "Network Printer Sharing" },
+  { name: "File & Folder Sharing" },
+  { name: "Network Drive Mapping" },
+  { name: "RJ45 Crimping & Ethernet Cabling" },
+  { name: "Linux Installation & Configuration" },
+  { name: "Basic Samba Server Configuration" },
+  { name: "Basic CCTV Installation & Configuration" },
+  { name: "C Programming" },
+  { name: "HTML & CSS" },
+  { name: "JavaScript" },
 ];
-
 const soft = [
   { name: "Communication", icon: MessageSquare },
   { name: "Problem Solving", icon: Lightbulb },
@@ -37,25 +46,20 @@ const SkillsSection = () => (
             <span className="w-2 h-6 rounded-full gradient-bg" />
             Technical Skills
           </h3>
-          <div className="space-y-4">
-            {technical.map((s, i) => (
-              <div key={s.name}>
-                <div className="flex justify-between text-sm mb-1.5">
-                  <span className="text-foreground font-medium">{s.name}</span>
-                  <span className="text-primary font-semibold">{s.pct}%</span>
-                </div>
-                <div className="h-2.5 bg-muted rounded-full overflow-hidden">
-                  <motion.div
-                    className="h-full gradient-bg rounded-full"
-                    initial={{ width: 0 }}
-                    whileInView={{ width: `${s.pct}%` }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8, delay: i * 0.05 }}
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+  {technical.map((s, i) => (
+    <motion.div
+      key={s.name}
+      initial={{ opacity: 0, y: 10 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: i * 0.03 }}
+      className="px-4 py-3 rounded-lg bg-accent border border-primary/10 hover:border-primary/30 transition-colors"
+    >
+      <span className="text-sm font-medium text-foreground">{s.name}</span>
+    </motion.div>
+  ))}
+</div>
         </motion.div>
 
         <motion.div
