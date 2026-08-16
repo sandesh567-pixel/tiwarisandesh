@@ -40,7 +40,7 @@ const HeroSection = () => (
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary" />
             </span>
-            Available for Freelance
+            Open to IT Support & Networking Opportunities
           </motion.div>
 
           <motion.h1
@@ -61,7 +61,7 @@ const HeroSection = () => (
             transition={{ duration: 0.5, delay: 0.2 }}
             className="flex flex-wrap items-center gap-3 text-sm md:text-base mb-6"
           >
-            {["IT Student", "Full Stack Developer", "Hardware & Networking"].map((role, i) => (
+            {["IT Student", "BIT Student", "IT Support", "Networking & System Administration"].map((role, i) => (
               <span key={role} className="flex items-center gap-3">
                 {i > 0 && <span className="w-1 h-6 rounded-full bg-primary/30" />}
                 <span className="text-muted-foreground">{role}</span>
@@ -75,7 +75,7 @@ const HeroSection = () => (
             transition={{ duration: 0.5, delay: 0.3 }}
             className="text-muted-foreground max-w-lg mb-8 text-base md:text-lg leading-relaxed"
           >
-            Passionate about technology, networking, and building modern digital solutions that make a difference.
+            BIT student developing practical skills in IT support, networking, system administration, and web development. Interested in troubleshooting technical issues and building reliable IT solutions.
           </motion.p>
 
           <motion.div
