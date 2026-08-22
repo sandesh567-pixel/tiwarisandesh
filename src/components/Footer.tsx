@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Heart } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 const links = [
   { label: "About", href: "#about" },
@@ -9,9 +9,21 @@ const links = [
 ];
 
 const socials = [
-  { icon: Github, href: "https://github.com/sandeshtiwari", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com/in/sandeshtiwari", label: "LinkedIn" },
-  { icon: Mail, href: "mailto:sandesh@example.com", label: "Email" },
+  {
+    icon: Github,
+    href: "https://github.com/sandesh567-pixel",
+    label: "GitHub",
+  },
+  {
+    icon: Linkedin,
+    href: "https://www.linkedin.com/in/sandesh-tiwari-b16a5a337/",
+    label: "LinkedIn",
+  },
+  {
+    icon: Mail,
+    href: "mailto:sdhtw567@gmail.com",
+    label: "Email",
+  },
 ];
 
 const Footer = () => (
@@ -19,13 +31,25 @@ const Footer = () => (
     <div className="container mx-auto px-4">
       <div className="grid md:grid-cols-3 gap-8 items-center mb-8">
         <div>
-          <a href="#" className="text-2xl font-display font-bold gradient-text">Sandesh.</a>
-          <p className="text-muted-foreground text-sm mt-2">IT Student & Full Stack Developer from Nepal</p>
+          <a
+            href="#"
+            className="text-2xl font-display font-bold gradient-text"
+          >
+            Sandesh.
+          </a>
+
+          <p className="text-muted-foreground text-sm mt-2">
+            IT Support, Networking & Web Development
+          </p>
         </div>
 
         <div className="flex flex-wrap justify-center gap-4">
           {links.map((l) => (
-            <a key={l.href} href={l.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+            <a
+              key={l.href}
+              href={l.href}
+              className="text-sm text-muted-foreground hover:text-primary transition-colors"
+            >
               {l.label}
             </a>
           ))}
@@ -48,8 +72,8 @@ const Footer = () => (
       </div>
 
       <div className="border-t border-border pt-6 text-center">
-        <p className="text-muted-foreground text-sm flex items-center justify-center gap-1">
-          © 2026 Sandesh Tiwari. Made with <Heart className="h-3.5 w-3.5 text-destructive fill-destructive" /> All rights reserved.
+        <p className="text-muted-foreground text-sm">
+          © 2026 Sandesh Tiwari. All rights reserved.
         </p>
       </div>
     </div>
