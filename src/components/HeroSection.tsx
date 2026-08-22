@@ -4,12 +4,6 @@ import { Button } from "@/components/ui/button";
 
 const profileImg = "https://i.postimg.cc/7ZYJSjsP/IMG-6819-copy.jpg";
 
-const stats = [
-  { value: "10+", label: "Projects" },
-  { value: "5+", label: "Skills" },
-  { value: "1+", label: "Years Exp" },
-];
-
 const socials = [
   { icon: Github, href: "https://github.com/sandesh567-pixel", label: "GitHub" },
   { icon: Linkedin, href: "https://www.linkedin.com/in/sandesh-tiwari-b16a5a337/", label: "LinkedIn" },
@@ -61,7 +55,7 @@ const HeroSection = () => (
             transition={{ duration: 0.5, delay: 0.2 }}
             className="flex flex-wrap items-center gap-3 text-sm md:text-base mb-6"
           >
-            {[ "BIT Student", "IT Support", "Networking & System Administration"].map((role, i) => (
+            {["BIT Student", "IT Support", "Networking & System Administration"].map((role, i) => (
               <span key={role} className="flex items-center gap-3">
                 {i > 0 && <span className="w-1 h-6 rounded-full bg-primary/30" />}
                 <span className="text-muted-foreground">{role}</span>
@@ -75,7 +69,9 @@ const HeroSection = () => (
             transition={{ duration: 0.5, delay: 0.3 }}
             className="text-muted-foreground max-w-lg mb-8 text-base md:text-lg leading-relaxed"
           >
-            BIT student developing practical skills in IT support, networking, system administration, and web development. Interested in troubleshooting technical issues and building reliable IT solutions.
+            BIT student focused on building practical skills in IT support, computer networking, 
+            system administration, and web development. Passionate about troubleshooting technical 
+            issues and delivering reliable IT solutions.
           </motion.p>
 
           <motion.div
@@ -97,21 +93,6 @@ const HeroSection = () => (
                 View Projects
               </a>
             </Button>
-          </motion.div>
-
-          {/* Stats */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-            className="flex gap-8 pt-6 border-t border-border"
-          >
-            {stats.map((stat, i) => (
-              <div key={i} className="text-center">
-                <div className="text-2xl md:text-3xl font-display font-bold gradient-text">{stat.value}</div>
-                <div className="text-xs md:text-sm text-muted-foreground mt-1">{stat.label}</div>
-              </div>
-            ))}
           </motion.div>
         </div>
 
@@ -136,25 +117,6 @@ const HeroSection = () => (
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
             </div>
-
-            {/* Floating badges */}
-            <motion.div
-              animate={{ y: [-5, 5, -5] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -right-4 top-8 bg-card border border-border rounded-xl px-4 py-3 card-shadow"
-            >
-              <div className="text-lg font-bold text-foreground">10+</div>
-              <div className="text-xs text-muted-foreground">Projects</div>
-            </motion.div>
-
-            <motion.div
-              animate={{ y: [5, -5, 5] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -left-4 bottom-12 bg-card border border-border rounded-xl px-4 py-3 card-shadow"
-            >
-              <div className="text-lg font-bold text-foreground">5+</div>
-              <div className="text-xs text-muted-foreground">Tech Skills</div>
-            </motion.div>
 
             {/* Social links */}
             <div className="absolute -right-6 bottom-1/3 flex flex-col gap-3">
@@ -200,3 +162,4 @@ const HeroSection = () => (
 );
 
 export default HeroSection;
+ 
